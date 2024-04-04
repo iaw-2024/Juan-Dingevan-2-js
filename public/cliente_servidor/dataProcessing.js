@@ -11,7 +11,7 @@ function button() {
 }
 
 function data() {
-    fetch("http://localhost:3001/datos")
+    fetch("/datos")
         .then(response => response.json())
 
         .then(datos => {
