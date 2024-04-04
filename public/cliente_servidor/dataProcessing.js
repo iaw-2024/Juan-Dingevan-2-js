@@ -11,7 +11,7 @@ function button() {
 }
 
 function data() {
-    fetch("./datos")
+    fetch("/datos")
         .then(response => response.json())
 
         .then(datos => {
