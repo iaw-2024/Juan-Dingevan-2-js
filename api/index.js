@@ -60,7 +60,7 @@ app.get("/cliente_servidor", (req, res) => {
 });
 
 app.get("/datos", (req, res) => {
-    res.sendFile("./public/datos.json", { root: '.' });
+    res.sendFile("public/datos.json", { root: '.' });
 });
 
 app.use(express.static('public'))
