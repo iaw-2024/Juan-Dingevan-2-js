@@ -52,7 +52,7 @@ app.get("/express", (req, res) => {
 
             const htmlNew = html.replace("<TABLA />", tableHTML);
 
-            res.send(htmlNew);
+            res.send(datosCrudos);
         })
     })
 });
