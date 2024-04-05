@@ -5,17 +5,17 @@ const process = require("process");
 const app = express();
 
 app.get("/express", (req, res) => {
-    fs.readFile("public/express_assets/index.html", "utf8", (err, html) => {
+    fs.readFile(path.join(process.cwd(), "express_assets", "index.html"), "utf8", (err, html) => {
         if(err) {
             console.log(err)
-            res.status(500).send("Error del servidor");
+            res.status(500).send("Error intentando abrir el HTML - " + err);
             return;
         }
 
         fs.readFile(path.join(process.cwd(), "public", "datos.json"), "utf8", (err2, datosCrudos) => {
             if(err2) {
                 console.log(err2)
-                res.status(500).send("Error 2 del servidor");
+                res.status(500).send("Error intentando abrir el JSON - " + err2);
                 return;
             }
 
