@@ -60,7 +60,15 @@ app.get("/cliente_servidor", (req, res) => {
 });
 
 app.get("/datos", (req, res) => {
-    res.send("pepe");
+    fs.readFile("public/datos.json", "utf8", (err, json) => {
+        if (err) {
+            console.log(err)
+            res.status(500).send("Error del servidor");
+            return;
+        }
+
+        res.send(json);
+    })
     //res.sendFile("./public/datos.json", { root: '.' });
 });
 
