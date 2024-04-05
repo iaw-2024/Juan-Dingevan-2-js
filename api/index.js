@@ -5,7 +5,7 @@ const process = require("process");
 const app = express();
 
 app.get("/express", (req, res) => {
-    fs.readFile("public/express/index.html", "utf8", (err, html) => {
+    /*fs.readFile("public/express/index.html", "utf8", (err, html) => {
         if(err) {
             console.log(err)
             res.status(500).send("Error del servidor");
@@ -54,7 +54,8 @@ app.get("/express", (req, res) => {
 
             res.send(datosCrudos);
         })
-    })
+    })*/
+    res.send("pepe");
 });
 
 app.get("/cliente_servidor", (req, res) => {
