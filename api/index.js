@@ -12,7 +12,7 @@ app.get("/express", (req, res) => {
             return;
         }
 
-        fs.readFile("./public/datos.json", "utf8", (err2, datosCrudos) => {
+        fs.readFile(path.join(process.cwd(), "public", "datos.json"), "utf8", (err2, datosCrudos) => {
             if(err2) {
                 console.log(err2)
                 res.status(500).send("Error 2 del servidor");
