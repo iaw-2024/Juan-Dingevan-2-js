@@ -5,7 +5,7 @@ const process = require("process");
 const app = express();
 
 app.get("/express", (req, res) => {
-    fs.readFile(path.join(process.cwd(), "express_assets", "index.html"), "utf8", (err, html) => {
+    fs.readFile(path.join(process.cwd(), "public", "express_assets", "index.html"), "utf8", (err, html) => {
         if(err) {
             console.log(err)
             res.status(500).send("Error intentando abrir el HTML - " + err);
