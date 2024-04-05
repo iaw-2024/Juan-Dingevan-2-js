@@ -2,6 +2,8 @@ const express = require("express");
 const fs = require("fs");
 const app = express();
 
+const JSON_ABSOLUTE_PATH = "C:\\Users\\Juani\\Desktop\\UNI\\2024 -- Primer Cuatrimestre\\Ingenieria de Aplicaciones Web\\Ejercicios Tecnicos\\Ejercicio Tecnico 2\\Juan-Dingevan-2-js\\public\\datos.json";
+
 app.get("/express", (req, res) => {
     fs.readFile("public/express/index.html", "utf8", (err, html) => {
         if(err) {
@@ -60,7 +62,7 @@ app.get("/cliente_servidor", (req, res) => {
 });
 
 app.get("/datos", (req, res) => {
-    fs.readFile("./datos.json", "utf8", (err, json) => {
+    fs.readFile(JSON_ABSOLUTE_PATH, "utf8", (err, json) => {
         if (err) {
             res.status(500).send("" + err);
             return;
