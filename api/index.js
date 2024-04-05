@@ -1,5 +1,7 @@
 const express = require("express");
 const fs = require("fs");
+const path = require("path");
+const process = require("process");
 const app = express();
 
 app.get("/express", (req, res) => {
@@ -60,7 +62,7 @@ app.get("/cliente_servidor", (req, res) => {
 });
 
 app.get("/datos", (req, res) => {
-    fs.readFile("public/datos.json", "utf8", (err, json) => {
+    fs.readFile(path.join(process.cwd(), "public", "datos.json"), "utf8", (err, json) => {
         if (err) {
             res.status(500).send("" + err);
             return;
