@@ -60,10 +60,9 @@ app.get("/cliente_servidor", (req, res) => {
 });
 
 app.get("/datos", (req, res) => {
-    fs.readFile("public/datos.json", "utf8", (err, json) => {
+    fs.readFile("./public/datos.json", "utf8", (err, json) => {
         if (err) {
-            console.log(err)
-            res.status(500).send("Error del servidor");
+            res.status(500).send("Error del servidor" + err);
             return;
         }
 
