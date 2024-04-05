@@ -60,7 +60,7 @@ app.get("/cliente_servidor", (req, res) => {
 });
 
 app.get("/datos", (req, res) => {
-    fs.readFile("datos.json", "utf8", (err, json) => {
+    fs.readFile("./datos.json", "utf8", (err, json) => {
         if (err) {
             res.status(500).send("" + err);
             return;
