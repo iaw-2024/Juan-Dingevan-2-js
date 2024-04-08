@@ -10,7 +10,13 @@ function button() {
     });
 }
 
+let hasBeenPressed = false;
+
 function data() {
+    if(hasBeenPressed) {
+        return;
+    }
+
     fetch("/datos")
         .then(response => response.json())
 
@@ -34,6 +40,8 @@ function data() {
 
                 //Agregamos la n-esima fila a la tabla
                 table.appendChild(tr);
+
+                hasBeenPressed = true;
             });
         })
 
