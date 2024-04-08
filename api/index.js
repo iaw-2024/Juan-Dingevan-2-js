@@ -38,7 +38,7 @@ app.get("/express", (req, res) => {
                 tableHTML += `<td class="py-3 px-6 text-left whitespace-nowrap">${cafe['tostadores']}</td>`;
                 tableHTML += `<td class="py-3 px-6 text-left whitespace-nowrap">${cafe['paisDeOrigen']}</td>`;
                 tableHTML += `<td class="py-3 px-6 text-left whitespace-nowrap">${cafe['regionDeOrigen']}</td>`;
-                tableHTML += `<td class="py-3 px-6 text-left whitespace-nowrap">${cafe['varietales']}</td>`;
+                tableHTML += `<td class="py-3 px-6 text-left whitespace-nowrap">${cafe['variedades']}</td>`;
                 tableHTML += `<td class="py-3 px-6 text-left whitespace-nowrap">${cafe['proceso']}</td>`;
                 tableHTML += `<td class="py-3 px-6 text-left whitespace-nowrap">${cafe['notasDeCata']}</td>`;
                 tableHTML += `<td class="py-3 px-6 text-left whitespace-nowrap">${cafe['peso']}</td>`;
