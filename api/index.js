@@ -21,8 +21,8 @@ app.get("/express", (req, res) => {
 
             let datos = JSON.parse(datosCrudos);
 
-            let tableHTML = '<table class="w-full border-collapse border shadow-lg bg-white">';
-            tableHTML += '<thead><tr class="bg-green-600 text-white">';
+            let tableHTML = '<table class="w-80 border-collapse border shadow-lg bg-white">';
+            tableHTML += '<thead><tr class="bg-[#5F6F52] text-white">';
             tableHTML += '<th class="py-3 px-6 text-left border-b border-black-200">Tostadores</th>';
             tableHTML += '<th class="py-3 px-6 text-left border-b border-black-200">País de Origen</th>';
             tableHTML += '<th class="py-3 px-6 text-left border-b border-black-200">Región de Origen</th>';
