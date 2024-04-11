@@ -4,8 +4,14 @@
     <meta charset="utf-8">
     <title>Ejercicio 2 - Client-Side JavaScript</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./clientSideDataProcessing.js"></script>
-    <!--<link href="../../style.css" rel="stylesheet" />-->
+
+    <!--
+        ¿Por qué a este le tengo que especificar que está
+        en la carpeta cliente_servidor, pero al de la
+        carpeta dom no hace falta?
+    -->
+
+    <script src="./dataProcessing.js"></script>
 </head>
 <body>
 <nav class="bg-[#5F6F52]">
@@ -22,13 +28,13 @@
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-9 rtl:space-x-reverse md:mt-0">
                 <li>
-                    <a href="/dom/" class="block py-6 px-3 rounded text-black font-bold hover:bg-[#A9B388]" aria-current="page">Client-Side JS</a>
+                    <a href="/dom/" class="block py-6 px-3 rounded text-black hover:bg-[#A9B388]">Client-Side JS</a>
                 </li>
                 <li>
                     <a href="/express/" class="block py-6 px-3 rounded text-black hover:bg-[#A9B388]">Server-Side JS</a>
                 </li>
                 <li>
-                    <a href="/cliente_servidor/" class="block py-6 px-3 rounded text-black hover:bg-[#A9B388]">Client-Server JS</a>
+                    <a href="/cliente_servidor/" class="block py-6 px-3 rounded text-black hover:bg-[#A9B388] font-bold" aria-current="page">Client-Server JS</a>
                 </li>
             </ul>
         </div>

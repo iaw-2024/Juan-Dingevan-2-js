@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <title>Ejercicio 2 - Client-Side JavaScript</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./clientSideDataProcessing.js"></script>
-    <!--<link href="../../style.css" rel="stylesheet" />-->
 </head>
 <body>
 <nav class="bg-[#5F6F52]">
@@ -22,10 +20,10 @@
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-9 rtl:space-x-reverse md:mt-0">
                 <li>
-                    <a href="/dom/" class="block py-6 px-3 rounded text-black font-bold hover:bg-[#A9B388]" aria-current="page">Client-Side JS</a>
+                    <a href="/dom/" class="block py-6 px-3 rounded text-black hover:bg-[#A9B388]">Client-Side JS</a>
                 </li>
                 <li>
-                    <a href="/express/" class="block py-6 px-3 rounded text-black hover:bg-[#A9B388]">Server-Side JS</a>
+                    <a href="/express/" class="block py-6 px-3 rounded text-black hover:bg-[#A9B388] font-bold" aria-current="page">Server-Side JS</a>
                 </li>
                 <li>
                     <a href="/cliente_servidor/" class="block py-6 px-3 rounded text-black hover:bg-[#A9B388]">Client-Server JS</a>
@@ -35,29 +33,12 @@
     </div>
 </nav>
 
-<div class="flex justify-center p-2">
-    <button onClick="data()" class="p-8 rounded text-white bg-[#5F6F52] hover:bg-[#A9B388] duration-700">
-        Listado de Café
-    </button>
+<div class="titulo">
+    <h2 class="p-2">Listado de Café</h2>
 </div>
 
 <div class="flex justify-center">
-    <table class="w-80 border-collapse border shadow-lg bg-white">
-        <thead>
-        <tr class="bg-[#5F6F52] text-white text-center">
-            <th class="py-3 px-6 border-b border-black-200">Tostadores</th>
-            <th class="py-3 px-6 border-b border-black-200">País de Origen</th>
-            <th class="py-3 px-6 border-b border-black-200">Región de Origen</th>
-            <th class="py-3 px-6 border-b border-black-200">Varietales</th>
-            <th class="py-3 px-6 border-b border-black-200">Proceso</th>
-            <th class="py-3 px-6 border-b border-black-200">Notas de Cata</th>
-            <th class="py-3 px-6 border-b border-black-200">Peso (gr)</th>
-            <th class="py-3 px-6 border-b border-black-200">Precio (USD)</th>
-        </tr>
-        </thead>
-        <tbody id="coffeeListTableBody">
-        </tbody>
-    </table>
+    <TABLA />
 </div>
 
 </body>
